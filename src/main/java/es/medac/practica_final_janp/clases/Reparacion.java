@@ -15,9 +15,9 @@ public class Reparacion {
     private String Tiempo;
     private double totalReparacion;
     private Cliente c;
-    private vehiculo v;
+    private Vehiculo v;
 
-    public Reparacion(String Descripcion, String fecha, String Tiempo, double totalReparacion, Cliente c, vehiculo v) {
+    public Reparacion(String Descripcion, String fecha, String Tiempo, double totalReparacion, Cliente c, Vehiculo v) {
         this.Descripcion = Descripcion;
         this.fecha = fecha;
         this.Tiempo = Tiempo;
@@ -66,11 +66,11 @@ public class Reparacion {
         this.c = c;
     }
 
-    public vehiculo getV() {
+    public Vehiculo getV() {
         return v;
     }
 
-    public void setV(vehiculo v) {
+    public void setV(Vehiculo v) {
         this.v = v;
     }
 
