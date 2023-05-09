@@ -3,6 +3,9 @@
  */
 
 package es.medac.practica_final_janp;
+
+import es.medac.practica_final_janp.Interfaces.Conectar;
+
 /**
  *
  * @author pipoa
@@ -10,6 +13,7 @@ package es.medac.practica_final_janp;
 public class Practica_Final_JANP {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+       Conectar ejecutamos = new Conectar();
+       ejecutamos.setVisible(true);
     }
 }

@@ -4,22 +4,42 @@
  */
 package es.medac.practica_final_janp.Interfaces;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+
 /**
  *
- * @author pipoa
+ * @author Usuario
  */
-public class Menu extends javax.swing.JFrame {
+public class Conectar extends javax.swing.JFrame {
+ protected Connection conexion;
+    String URL = "jdbc:mysql://localhost:3306/PROYECTOENTORNOS";
+    String usuario = "root";
+    String contraseña = "1234";
+    PreparedStatement ps; 
+    ResultSet rs; 
 
+    public Connection getConnection() {  //Esto hay que ponserlo siempre
+
+        try {
+            conexion = (Connection) DriverManager.getConnection(URL, usuario, contraseña);
+            JOptionPane.showMessageDialog(null,"Conexión a la base de datos establecida con éxito ");
+            Menu menu = new Menu();
+            menu.setVisible(true);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error " + e);
+
+        }
+        return conexion;
+    }
     /**
-     * Creates new form Menu
+     * Creates new form Conectar
      */
-    public Menu() {
+    public Conectar() {
         initComponents();
-        setTitle("Realizado por ALUMNOS MEDAC");
-        setSize(500, 500);
-
-        setLocationRelativeTo(null); // Centra la ventana en la pantalla
-        setVisible(true);
     }
 
     /**
@@ -32,21 +52,25 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        Boton_Conectar = new javax.swing.JButton();
+        Fondo = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
-        );
+        Boton_Conectar.setBackground(new java.awt.Color(255, 255, 204));
+        Boton_Conectar.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        Boton_Conectar.setText("CONECTAR");
+        Boton_Conectar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_ConectarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Boton_Conectar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 154, 40));
+
+        Fondo.setBackground(new java.awt.Color(255, 204, 153));
+        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -61,6 +85,11 @@ public class Menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Boton_ConectarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_ConectarActionPerformed
+            Connection conexion = getConnection();
+            dispose();
+    }//GEN-LAST:event_Boton_ConectarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,25 +108,27 @@ public class Menu extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Conectar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Conectar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Conectar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Conectar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu().setVisible(true);
+                new Conectar().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Boton_Conectar;
+    private javax.swing.JTextField Fondo;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
