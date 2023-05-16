@@ -10,11 +10,13 @@ package es.medac.practica_final_janp.clases;
  */
 public class Cliente {
     private int idCliente;
+    private String dni;
     private String nombre;
     private String apellidos;
     private int edad;
     
     public Cliente(){
+        this.dni = "";
         this.idCliente = 0;
         this.apellidos="";
         this.nombre = "";
@@ -26,8 +28,16 @@ public class Cliente {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.edad = edad;
+        this.dni = dni;
     }
-
+    
+    public void setDni(){
+        this.dni = dni;
+    }
+    
+    public String getDni(){
+        return dni;
+    }
     public int getIdCliente() {
         return idCliente;
     }

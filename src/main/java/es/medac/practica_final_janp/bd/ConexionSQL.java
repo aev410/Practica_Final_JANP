@@ -30,7 +30,7 @@ public class ConexionSQL {
         }
     }
 
-    public Connection getConexion() {
+        public Connection getConexion() {
         return conexion;
     }
 

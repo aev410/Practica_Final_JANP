@@ -9,22 +9,24 @@ package es.medac.practica_final_janp.clases;
  * @author naimg
  */
 public class Reparacion {
-    
     private String Descripcion;
     private String fecha;
     private String Tiempo;
     private double totalReparacion;
-    private Cliente c;
-    private Vehiculo v;
+    private int idCliente;
+    private int idVehiculo;
 
-    public Reparacion(String Descripcion, String fecha, String Tiempo, double totalReparacion, Cliente c, Vehiculo v) {
+    public Reparacion(int idReparacion, String Descripcion, String fecha, String Tiempo, double totalReparacion, int idCliente, int idVehiculo) {
         this.Descripcion = Descripcion;
         this.fecha = fecha;
         this.Tiempo = Tiempo;
         this.totalReparacion = totalReparacion;
-        this.c = c;
-        this.v = v;
+        this.idCliente = idCliente;
+        this.idVehiculo = idVehiculo;
+        
     }
+
+    
 
     public String getDescripcion() {
         return Descripcion;
@@ -58,25 +60,25 @@ public class Reparacion {
         this.totalReparacion = totalReparacion;
     }
 
-    public Cliente getC() {
-        return c;
+    public int getIdCliente() {
+        return idCliente;
     }
 
-    public void setC(Cliente c) {
-        this.c = c;
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
     }
 
-    public Vehiculo getV() {
-        return v;
+    public int getIdVehiculo() {
+        return idVehiculo;
     }
 
-    public void setV(Vehiculo v) {
-        this.v = v;
+    public void setIdVehiculo(int idVehiculo) {
+        this.idVehiculo = idVehiculo;
     }
 
+    
     @Override
     public String toString() {
-        return "Reparacion{" + "Descripcion=" + Descripcion + ", fecha=" + fecha + ", Tiempo=" + Tiempo + ", totalReparacion=" + totalReparacion + ", c=" + c + ", v=" + v + '}';
+        return "Reparacion{" + "Descripcion=" + Descripcion + ", fecha=" + fecha + ", Tiempo=" + Tiempo + ", totalReparacion=" + totalReparacion + ", idCliente=" + idCliente + ", idVehiculo=" + idVehiculo + '}';
     }
-
 }
