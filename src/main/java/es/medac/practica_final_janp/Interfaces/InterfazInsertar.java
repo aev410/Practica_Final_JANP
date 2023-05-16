@@ -4,42 +4,19 @@
  */
 package es.medac.practica_final_janp.Interfaces;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import javax.swing.JOptionPane;
-
 /**
  *
- * @author Usuario
+ * @author pipoa
  */
-public class Conectar extends javax.swing.JFrame {
- protected Connection conexion;
-    String URL = "jdbc:mysql://localhost:3306/PROYECTOENTORNOS";
-    String usuario = "root";
-    String contraseña = "";
-    PreparedStatement ps; 
-    ResultSet rs; 
+public class InterfazInsertar extends javax.swing.JFrame {
 
-    public Connection getConnection() {  //Esto hay que ponserlo siempre
-
-        try {
-            conexion = (Connection) DriverManager.getConnection(URL, usuario, contraseña);
-            JOptionPane.showMessageDialog(null,"Conexión a la base de datos establecida con éxito ");
-            Menu menu = new Menu();
-            menu.setVisible(true);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error " + e);
-
-        }
-        return conexion;
-    }
     /**
-     * Creates new form Conectar
+     * Creates new form InterfazInsertar
      */
-    public Conectar() {
+    public InterfazInsertar() {
         initComponents();
+        
+        setLocationRelativeTo(null); // Centra la ventana en la pantalla
     }
 
     /**
@@ -52,25 +29,45 @@ public class Conectar extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        Boton_Conectar = new javax.swing.JButton();
-        Fondo = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jB_menu2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(500, 500));
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
 
-        Boton_Conectar.setBackground(new java.awt.Color(255, 255, 204));
-        Boton_Conectar.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        Boton_Conectar.setText("CONECTAR");
-        Boton_Conectar.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setText("Insertar");
+
+        jB_menu2.setText("Menu");
+        jB_menu2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton_ConectarActionPerformed(evt);
+                jB_menu2ActionPerformed(evt);
             }
         });
-        jPanel1.add(Boton_Conectar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, 154, 40));
 
-        Fondo.setBackground(new java.awt.Color(255, 204, 153));
-        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 500));
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addComponent(jLabel1)
+                .addContainerGap(283, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jB_menu2)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 202, Short.MAX_VALUE)
+                .addComponent(jB_menu2)
+                .addGap(29, 29, 29))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -86,10 +83,12 @@ public class Conectar extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Boton_ConectarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_ConectarActionPerformed
-            Connection conexion = getConnection();
-            dispose();
-    }//GEN-LAST:event_Boton_ConectarActionPerformed
+    private void jB_menu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB_menu2ActionPerformed
+        // TODO add your handling code here:
+        Menu m = new Menu();
+        setVisible(false);
+        m.setVisible(true);
+    }//GEN-LAST:event_jB_menu2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -108,27 +107,27 @@ public class Conectar extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Conectar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfazInsertar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Conectar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfazInsertar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Conectar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfazInsertar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Conectar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfazInsertar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Conectar().setVisible(true);
+                new InterfazInsertar().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Boton_Conectar;
-    private javax.swing.JTextField Fondo;
+    private javax.swing.JButton jB_menu2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

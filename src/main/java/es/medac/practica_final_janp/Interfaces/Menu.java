@@ -32,20 +32,68 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jB_InterfazInsertar = new javax.swing.JButton();
+        jB_InterfazEliminar = new javax.swing.JButton();
+        jB_InterfazModificar = new javax.swing.JButton();
+        jB_InterfazSeleccionar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
 
+        jB_InterfazInsertar.setText("Insertar");
+        jB_InterfazInsertar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB_InterfazInsertarActionPerformed(evt);
+            }
+        });
+
+        jB_InterfazEliminar.setText("Eliminar");
+        jB_InterfazEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB_InterfazEliminarActionPerformed(evt);
+            }
+        });
+
+        jB_InterfazModificar.setText("Modificar");
+        jB_InterfazModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB_InterfazModificarActionPerformed(evt);
+            }
+        });
+
+        jB_InterfazSeleccionar.setText("Seleccionar");
+        jB_InterfazSeleccionar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB_InterfazSeleccionarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jB_InterfazSeleccionar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jB_InterfazModificar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jB_InterfazEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jB_InterfazInsertar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(349, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(119, 119, 119)
+                .addComponent(jB_InterfazInsertar)
+                .addGap(18, 18, 18)
+                .addComponent(jB_InterfazEliminar)
+                .addGap(18, 18, 18)
+                .addComponent(jB_InterfazModificar)
+                .addGap(18, 18, 18)
+                .addComponent(jB_InterfazSeleccionar)
+                .addContainerGap(227, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -61,6 +109,34 @@ public class Menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jB_InterfazInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB_InterfazInsertarActionPerformed
+        // TODO add your handling code here:
+        InterfazInsertar i = new InterfazInsertar();
+        setVisible(false);
+        i.setVisible(true);
+    }//GEN-LAST:event_jB_InterfazInsertarActionPerformed
+
+    private void jB_InterfazEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB_InterfazEliminarActionPerformed
+        // TODO add your handling code here:
+        InterfazEliminar i = new InterfazEliminar();
+        setVisible(false);
+        i.setVisible(true);
+    }//GEN-LAST:event_jB_InterfazEliminarActionPerformed
+
+    private void jB_InterfazModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB_InterfazModificarActionPerformed
+        // TODO add your handling code here:
+        InterfazModificar i = new InterfazModificar();
+        setVisible(false);
+        i.setVisible(true);
+    }//GEN-LAST:event_jB_InterfazModificarActionPerformed
+
+    private void jB_InterfazSeleccionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB_InterfazSeleccionarActionPerformed
+        // TODO add your handling code here:
+        InterfazSeleccionar i = new InterfazSeleccionar();
+        setVisible(false);
+        i.setVisible(true);
+    }//GEN-LAST:event_jB_InterfazSeleccionarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -98,6 +174,10 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jB_InterfazEliminar;
+    private javax.swing.JButton jB_InterfazInsertar;
+    private javax.swing.JButton jB_InterfazModificar;
+    private javax.swing.JButton jB_InterfazSeleccionar;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
