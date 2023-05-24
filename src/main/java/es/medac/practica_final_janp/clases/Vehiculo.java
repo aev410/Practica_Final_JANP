@@ -5,17 +5,29 @@
 package es.medac.practica_final_janp.clases;
 
 /**
- *
+ * 
  * @author Invitao
  */
 public class Vehiculo {
+    /**
+     * Se crean las variables de la clase
+     * Vehiculo con sus atributos
+     */
     private int idVehiculo;
     private String matricula;
     private String marca;
     private String modelo;
     private String año;
     private String color;
-
+/**
+ * Creamos el constructor con parametros
+ * @param idVehiculo
+ * @param matricula
+ * @param marca
+ * @param modelo
+ * @param año
+ * @param color 
+ */
     public Vehiculo(int idVehiculo, String matricula, String marca, String modelo, String año, String color) {
         super();
         this.idVehiculo = idVehiculo;
@@ -25,11 +37,15 @@ public class Vehiculo {
         this.año = año;
         this.color = color;
     }
-
+/**
+ * Se crea el constructor vacio
+ */
     public Vehiculo() {
         super();
     }
-
+/**
+ * Se crean los getters y setters
+ */
     public int getIdVehiculo() {
         return idVehiculo;
     }
@@ -77,13 +93,13 @@ public class Vehiculo {
     public void setColor(String color) {
         this.color = color;
     }
-
+/**
+ * Creamos el metodo toString que lo que hace es mostrarnos un resumen
+ * de los atributos de la clase
+ * @return resumen de atributos de la clase
+ */
     @Override
     public String toString() {
         return "Vehiculo{" + "idVehiculo=" + idVehiculo + ", matricula=" + matricula + ", marca=" + marca + ", modelo=" + modelo + ", a\u00f1o=" + año + ", color=" + color + '}';
-    }
-    
-    
- 
-    
+    } 
 }

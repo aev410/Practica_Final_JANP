@@ -13,6 +13,7 @@ import java.sql.SQLException;
  * @author pipoa
  */
 public class ConexionSQL {
+    
     protected Connection conexion;
     private final String URL = "jdbc:mysql://localhost/proyectoentornos";
     private final String USUARIO = "root";

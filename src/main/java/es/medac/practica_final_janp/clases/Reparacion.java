@@ -5,7 +5,8 @@
 package es.medac.practica_final_janp.clases;
 
 /**
- *
+ * Se crean las variables de la clase
+ * reparacion
  * @author naimg
  */
 public class Reparacion {
@@ -15,7 +16,16 @@ public class Reparacion {
     private double totalReparacion;
     private int idCliente;
     private int idVehiculo;
-
+    /**
+     * Se crea el constructor con parametros
+     * @param idReparacion
+     * @param Descripcion
+     * @param fecha
+     * @param Tiempo
+     * @param totalReparacion
+     * @param idCliente
+     * @param idVehiculo 
+     */
     public Reparacion(int idReparacion, String Descripcion, String fecha, String Tiempo, 
             double totalReparacion, int idCliente, int idVehiculo) {
         this.Descripcion = Descripcion;
@@ -24,8 +34,16 @@ public class Reparacion {
         this.totalReparacion = totalReparacion;
         this.idCliente = idCliente;
         this.idVehiculo = idVehiculo;
-        
     }
+    /**
+     * Se crea el constructor vacio
+     */
+    public Reparacion(){
+        super();
+    }
+    /**
+     * Se crean los getters y setters
+     */
     public String getDescripcion() {
         return Descripcion;
     }
@@ -74,7 +92,10 @@ public class Reparacion {
         this.idVehiculo = idVehiculo;
     }
 
-    
+    /**
+     * Se crea el metodo toString que nos muestra un resumen de la clase con sus atributos
+     * @return resumen de la clase
+     */
     @Override
     public String toString() {
         return "Reparacion{" + "Descripcion=" + Descripcion + ", fecha=" + fecha + ", Tiempo=" + Tiempo + ", totalReparacion=" + totalReparacion + ", idCliente=" + idCliente + ", idVehiculo=" + idVehiculo + '}';

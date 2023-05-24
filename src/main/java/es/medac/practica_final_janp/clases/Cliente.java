@@ -4,33 +4,42 @@
  */
 package es.medac.practica_final_janp.clases;
 
-/**
- *
+
+public class Cliente {
+ /**
+ *  Se crean las variables de la clase
+ *  Cliente
  * @author naimg
  */
-public class Cliente {
     private int idCliente;
     private String dni;
     private String nombre;
     private String apellidos;
     private int edad;
-    
+    /**
+     * Se crea el constructor vacio
+     */
     public Cliente(){
-        this.dni = "";
-        this.idCliente = 0;
-        this.apellidos="";
-        this.nombre = "";
-        this.edad = 0;
+        super();
     }
-    
+    /**
+     * Se crea el constructor con los parametros
+     * @param idCliente
+     * @param nombre
+     * @param apellidos
+     * @param edad 
+     */
     public Cliente(int idCliente, String nombre, String apellidos, int edad) {
+        super();
         this.idCliente = idCliente;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.edad = edad;
         this.dni = dni;
     }
-    
+    /**
+     * Se crea los getters y setters
+     */
     public void setDni(){
         this.dni = dni;
     }
@@ -69,7 +78,11 @@ public class Cliente {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-
+    /**
+     * Se crea el metodo toString que lo que hace es mostrarnos un resumen
+     * de los atributos de la clase
+     * @return resumen de la clase
+     */
     @Override
     public String toString() {
         return "Cliente{" + "idCliente=" + idCliente + ", nombre=" + nombre + ", apellidos=" + apellidos + ", edad=" + edad + '}';
