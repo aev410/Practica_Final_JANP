@@ -18,7 +18,6 @@ public class Reparacion {
     private int idVehiculo;
     /**
      * Se crea el constructor con parametros
-     * @param idReparacion
      * @param Descripcion
      * @param fecha
      * @param Tiempo
@@ -26,7 +25,7 @@ public class Reparacion {
      * @param idCliente
      * @param idVehiculo 
      */
-    public Reparacion(int idReparacion, String Descripcion, String fecha, int Tiempo, 
+    public Reparacion( String Descripcion, String fecha, int Tiempo, 
             double totalReparacion, int idCliente, int idVehiculo) {
         this.Descripcion = Descripcion;
         this.fecha = fecha;

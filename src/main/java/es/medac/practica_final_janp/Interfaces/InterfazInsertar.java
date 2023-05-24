@@ -4,13 +4,10 @@
  */
 package es.medac.practica_final_janp.Interfaces;
 
-<<<<<<< HEAD
 import es.medac.practica_final_janp.bd.InsertarDatos;
 import es.medac.practica_final_janp.clases.Cliente;
+import es.medac.practica_final_janp.clases.Reparacion;
 import es.medac.practica_final_janp.clases.Vehiculo;
-=======
-import es.medac.practica_final_janp.bd.BorrarDatos;
->>>>>>> 3d4f8430b4453337736e1ec4ce397be8db504ecc
 
 /**
  *
@@ -301,8 +298,24 @@ public class InterfazInsertar extends javax.swing.JFrame {
                 panel.setText("Error " + e);
             }
         } else if (jCB_Tablas.getSelectedItem().equals("Reparacion")) {
-
-<<<<<<< HEAD
+            String descripcion = "";
+            int idV = 0;
+            int idC = 0;
+            String fecha = "";
+            int tiempo = 0;
+            double total = 0;
+            try {
+                descripcion = jTReparacion_descripcion.getText();
+                idV = Integer.parseInt(jTReparacion_idvehiculo.getText());
+                idC = Integer.parseInt(jTReparacion_idcliente.getText());
+                fecha = jTReparacion_fecha.getText();
+                tiempo = Integer.parseInt(jTReparacion_tiempo.getText());
+                total = Double.parseDouble(jTReparacion_total.getText());
+                Reparacion r = new Reparacion( descripcion, fecha, tiempo, total, idC, idV);
+                panel.setText(i.insertarReparacion(r));
+            } catch (Exception e) {
+                panel.setText("Error " + e);
+            }
         }
     }//GEN-LAST:event_JBinsertarActionPerformed
 
@@ -312,32 +325,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
     }//GEN-LAST:event_jCB_TablasActionPerformed
 
     public void mostrar() {
-=======
-    private void jTvehiculo_matriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTvehiculo_matriculaActionPerformed
-      
-    }//GEN-LAST:event_jTvehiculo_matriculaActionPerformed
-
-    private void jTReparacion_descripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTReparacion_descripcionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTReparacion_descripcionActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jCB_TablasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCB_TablasActionPerformed
-       
-    }//GEN-LAST:event_jCB_TablasActionPerformed
-
-    private void JBinsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBinsertarActionPerformed
-        BorrarDatos b = new BorrarDatos();
-        if (jCB_Tablas.getSelectedItem().equals("Cliente")) {
-    }
-    
-    }//GEN-LAST:event_JBinsertarActionPerformed
-
-    public void mostrar(){
->>>>>>> 3d4f8430b4453337736e1ec4ce397be8db504ecc
         if (jCB_Tablas.getSelectedItem().equals("Cliente")) {
             jLCliente_nombre.setVisible(true);
             jTCliente_nombre.setVisible(true);

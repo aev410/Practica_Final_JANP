@@ -206,6 +206,7 @@ public class InterfazEliminar extends javax.swing.JFrame {
 
     private void jCB_TablasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCB_TablasActionPerformed
         // TODO add your handling code here:
+        mostrar();
     }//GEN-LAST:event_jCB_TablasActionPerformed
 
     private void Boton_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SalirActionPerformed
