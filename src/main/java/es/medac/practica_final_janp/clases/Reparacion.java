@@ -12,7 +12,7 @@ package es.medac.practica_final_janp.clases;
 public class Reparacion {
     private String Descripcion;
     private String fecha;
-    private String Tiempo;
+    private int Tiempo;
     private double totalReparacion;
     private int idCliente;
     private int idVehiculo;
@@ -26,7 +26,7 @@ public class Reparacion {
      * @param idCliente
      * @param idVehiculo 
      */
-    public Reparacion(int idReparacion, String Descripcion, String fecha, String Tiempo, 
+    public Reparacion(int idReparacion, String Descripcion, String fecha, int Tiempo, 
             double totalReparacion, int idCliente, int idVehiculo) {
         this.Descripcion = Descripcion;
         this.fecha = fecha;
@@ -60,11 +60,11 @@ public class Reparacion {
         this.fecha = fecha;
     }
 
-    public String getTiempo() {
+    public int getTiempo() {
         return Tiempo;
     }
 
-    public void setTiempo(String Tiempo) {
+    public void setTiempo(int Tiempo) {
         this.Tiempo = Tiempo;
     }
 
