@@ -46,14 +46,117 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="283" max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jB_menu2" max="-2" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jB_menu2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLReparacion_descripcion" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="jLReparacion_idcliente" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jLReparacion_idvehiculo" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="jLReparacion_fecha" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jTReparacion_descripcion" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTReparacion_idcliente" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTReparacion_idvehiculo" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTReparacion_fecha" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jTReparacion_tiempo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLReparacion_tiempo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="jLVehiculo_matricula" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="jLvehiculo_marca" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jLvehiculo_modelo" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="jLvehiculo_año" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="jTvehiculo_matricula" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jTvehiculo_marca" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jTvehiculo_modelo" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jTvehiculo_año" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="jCB_Tablas" min="-2" pref="57" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="jLCliente_dni" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                          <Component id="jLCliente_nombre" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="jLCliente_apellido" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="jLCliente_edad" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="jTCliente_dni" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="jTCliente_nombre" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="jTCliente_apellido" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="jTCliente_edad" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jTVehiculo_color" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLVehiculo_color" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLReparacion_total" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <Component id="jTReparacion_total" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -61,9 +164,69 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="202" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" pref="24" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLCliente_dni" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLCliente_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLCliente_apellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLCliente_edad" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jCB_Tablas" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTCliente_dni" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTCliente_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTCliente_apellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTCliente_edad" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLVehiculo_matricula" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLvehiculo_marca" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLvehiculo_modelo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLvehiculo_año" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLVehiculo_color" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jTvehiculo_matricula" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTvehiculo_marca" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTvehiculo_modelo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTvehiculo_año" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTVehiculo_color" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLReparacion_descripcion" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLReparacion_idcliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLReparacion_idvehiculo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLReparacion_fecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jTReparacion_descripcion" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTReparacion_idcliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTReparacion_idvehiculo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTReparacion_fecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLReparacion_tiempo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLReparacion_total" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jTReparacion_tiempo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTReparacion_total" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="64" max="32767" attributes="0"/>
                   <Component id="jB_menu2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               </Group>
@@ -83,6 +246,179 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jB_menu2ActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jCB_Tablas">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="3">
+                <StringItem index="0" value="Cliente"/>
+                <StringItem index="1" value="Vehiculo"/>
+                <StringItem index="2" value="Reparacion"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLCliente_dni">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="DNI"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTCliente_dni">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="dni"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTCliente_dniActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTCliente_nombre">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="nombre"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLCliente_nombre">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="nombre"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLCliente_apellido">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Apellidos"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTCliente_apellido">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Apellido"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLCliente_edad">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="edad"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTCliente_edad">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="edad"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTvehiculo_matricula">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Matricula"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTvehiculo_matriculaActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLVehiculo_matricula">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Matricula"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLvehiculo_marca">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="marca"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTvehiculo_marca">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="marca"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLvehiculo_modelo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="modelo"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTvehiculo_modelo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="modelo"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLvehiculo_a&#xf1;o">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="a&#xf1;o"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTvehiculo_a&#xf1;o">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="a&#xf1;o"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTVehiculo_color">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="color"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLVehiculo_color">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Color"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLReparacion_descripcion">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Descripcion"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTReparacion_descripcion">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="descripcion"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTReparacion_descripcionActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLReparacion_idcliente">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="IDCliente"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTReparacion_idcliente">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="IDCliente"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLReparacion_idvehiculo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="IDVehiculo"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTReparacion_idvehiculo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="IDVehiculo"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLReparacion_fecha">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Fecha"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTReparacion_fecha">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="fecha"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLReparacion_tiempo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tiempo"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTReparacion_tiempo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="tiempo"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLReparacion_total">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="TotalReparacioin"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTReparacion_total">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="total reparacion"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
