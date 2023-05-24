@@ -106,6 +106,9 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jLCliente_dni.setText("DNI");
         jPanel1.add(jLCliente_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, -1, -1));
 
+<<<<<<< HEAD
+        jTCliente_dni.setText("dni");
+=======
         jTCliente_dni.setBackground(new java.awt.Color(204, 255, 204));
         jTCliente_dni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,6 +116,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTCliente_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 100, 40));
+>>>>>>> 3b5b48b6852c3ebf2113c2321591a51d7793d823
 
         jTCliente_nombre.setBackground(new java.awt.Color(204, 255, 204));
         jPanel1.add(jTCliente_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 110, 40));
@@ -135,6 +139,9 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jTCliente_edad.setBackground(new java.awt.Color(204, 255, 204));
         jPanel1.add(jTCliente_edad, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, 80, 40));
 
+<<<<<<< HEAD
+        jTvehiculo_matricula.setText("Matricula");
+=======
         jTvehiculo_matricula.setBackground(new java.awt.Color(204, 255, 204));
         jTvehiculo_matricula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,6 +149,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTvehiculo_matricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 110, 40));
+>>>>>>> 3b5b48b6852c3ebf2113c2321591a51d7793d823
 
         jLVehiculo_matricula.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLVehiculo_matricula.setText("Matricula");
@@ -179,6 +187,9 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jLReparacion_descripcion.setText("Descripcion");
         jPanel1.add(jLReparacion_descripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
+<<<<<<< HEAD
+        jTReparacion_descripcion.setText("descripcion");
+=======
         jTReparacion_descripcion.setBackground(new java.awt.Color(204, 255, 204));
         jTReparacion_descripcion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,6 +197,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTReparacion_descripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 100, 40));
+>>>>>>> 3b5b48b6852c3ebf2113c2321591a51d7793d823
 
         jLReparacion_idcliente.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLReparacion_idcliente.setText("IDCliente");
@@ -278,18 +290,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
         setVisible(false);
         m.setVisible(true);
     }//GEN-LAST:event_jB_menu2ActionPerformed
-
-    private void jTCliente_dniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTCliente_dniActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTCliente_dniActionPerformed
-
-    private void jTvehiculo_matriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTvehiculo_matriculaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTvehiculo_matriculaActionPerformed
-
-    private void jTReparacion_descripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTReparacion_descripcionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTReparacion_descripcionActionPerformed
 
     /**
      * @param args the command line arguments
