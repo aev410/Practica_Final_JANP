@@ -4,6 +4,9 @@
  */
 package es.medac.practica_final_janp.Interfaces;
 
+import es.medac.practica_final_janp.bd.BorrarDatos;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author pipoa
@@ -29,41 +32,18 @@ public class InterfazEliminar extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        Boton_Salir = new javax.swing.JButton();
         JBinsertar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jB_menu2 = new javax.swing.JButton();
         jCB_Tablas = new javax.swing.JComboBox<>();
         jLCliente_dni = new javax.swing.JLabel();
         jTCliente_dni = new javax.swing.JTextField();
-        jTCliente_nombre = new javax.swing.JTextField();
-        jLCliente_nombre = new javax.swing.JLabel();
-        jLCliente_apellido = new javax.swing.JLabel();
-        jTCliente_apellido = new javax.swing.JTextField();
-        jLCliente_edad = new javax.swing.JLabel();
-        jTCliente_edad = new javax.swing.JTextField();
         jTvehiculo_matricula = new javax.swing.JTextField();
         jLVehiculo_matricula = new javax.swing.JLabel();
-        jLvehiculo_marca = new javax.swing.JLabel();
-        jTvehiculo_marca = new javax.swing.JTextField();
-        jLvehiculo_modelo = new javax.swing.JLabel();
-        jTvehiculo_modelo = new javax.swing.JTextField();
-        jLvehiculo_año = new javax.swing.JLabel();
-        jTvehiculo_año = new javax.swing.JTextField();
-        jTVehiculo_color = new javax.swing.JTextField();
-        jLVehiculo_color = new javax.swing.JLabel();
-        jLReparacion_descripcion = new javax.swing.JLabel();
-        jTReparacion_descripcion = new javax.swing.JTextField();
-        jLReparacion_idcliente = new javax.swing.JLabel();
-        jTReparacion_idcliente = new javax.swing.JTextField();
         jLReparacion_idvehiculo = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
         jTReparacion_idvehiculo = new javax.swing.JTextField();
-        jLReparacion_fecha = new javax.swing.JLabel();
-        jTReparacion_fecha = new javax.swing.JTextField();
-        jLReparacion_tiempo = new javax.swing.JLabel();
-        jTReparacion_tiempo = new javax.swing.JTextField();
-        jLReparacion_total = new javax.swing.JLabel();
-        jTReparacion_total = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jTextField1 = new javax.swing.JTextField();
@@ -76,14 +56,27 @@ public class InterfazEliminar extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setText("PRUEBA");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
+        Boton_Salir.setBackground(new java.awt.Color(255, 0, 0));
+        Boton_Salir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Boton_Salir.setText("SALIR");
+        Boton_Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_SalirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Boton_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 250, 130, 50));
 
+        JBinsertar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         JBinsertar.setText("Insert");
-        jPanel1.add(JBinsertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
+        JBinsertar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBinsertarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(JBinsertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 120, 30));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("Insertar");
+        jLabel1.setText("ELIMINAR");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, 24));
 
         jB_menu2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -93,16 +86,21 @@ public class InterfazEliminar extends javax.swing.JFrame {
                 jB_menu2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jB_menu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 340, 160, 60));
+        jPanel1.add(jB_menu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 160, 60));
 
         jCB_Tablas.setBackground(new java.awt.Color(255, 255, 204));
         jCB_Tablas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jCB_Tablas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Vehiculo", "Reparacion" }));
-        jPanel1.add(jCB_Tablas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 130, 40));
+        jCB_Tablas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCB_TablasActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jCB_Tablas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 130, 40));
 
         jLCliente_dni.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLCliente_dni.setText("DNI");
-        jPanel1.add(jLCliente_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, -1, -1));
+        jPanel1.add(jLCliente_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, -1, -1));
 
         jTCliente_dni.setBackground(new java.awt.Color(204, 255, 204));
         jTCliente_dni.addActionListener(new java.awt.event.ActionListener() {
@@ -110,28 +108,7 @@ public class InterfazEliminar extends javax.swing.JFrame {
                 jTCliente_dniActionPerformed(evt);
             }
         });
-        jPanel1.add(jTCliente_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 100, 40));
-
-        jTCliente_nombre.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel1.add(jTCliente_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 110, 40));
-
-        jLCliente_nombre.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLCliente_nombre.setText("nombre");
-        jPanel1.add(jLCliente_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, -1));
-
-        jLCliente_apellido.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLCliente_apellido.setText("Apellidos");
-        jPanel1.add(jLCliente_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, -1, -1));
-
-        jTCliente_apellido.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel1.add(jTCliente_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 50, 120, 40));
-
-        jLCliente_edad.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLCliente_edad.setText("edad");
-        jPanel1.add(jLCliente_edad, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, -1, -1));
-
-        jTCliente_edad.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel1.add(jTCliente_edad, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, 80, 40));
+        jPanel1.add(jTCliente_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, 180, 40));
 
         jTvehiculo_matricula.setBackground(new java.awt.Color(204, 255, 204));
         jTvehiculo_matricula.addActionListener(new java.awt.event.ActionListener() {
@@ -139,92 +116,27 @@ public class InterfazEliminar extends javax.swing.JFrame {
                 jTvehiculo_matriculaActionPerformed(evt);
             }
         });
-        jPanel1.add(jTvehiculo_matricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 110, 40));
+        jPanel1.add(jTvehiculo_matricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 200, 40));
 
         jLVehiculo_matricula.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLVehiculo_matricula.setText("Matricula");
-        jPanel1.add(jLVehiculo_matricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, -1, -1));
-
-        jLvehiculo_marca.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLvehiculo_marca.setText("marca");
-        jPanel1.add(jLvehiculo_marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, -1, -1));
-
-        jTvehiculo_marca.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel1.add(jTvehiculo_marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 90, 40));
-
-        jLvehiculo_modelo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLvehiculo_modelo.setText("modelo");
-        jPanel1.add(jLvehiculo_modelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, -1, -1));
-
-        jTvehiculo_modelo.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel1.add(jTvehiculo_modelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 90, 40));
-
-        jLvehiculo_año.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLvehiculo_año.setText("año");
-        jPanel1.add(jLvehiculo_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 100, 50, -1));
-
-        jTvehiculo_año.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel1.add(jTvehiculo_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 100, 40));
-
-        jTVehiculo_color.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel1.add(jTVehiculo_color, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, 90, 40));
-
-        jLVehiculo_color.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLVehiculo_color.setText("Color");
-        jPanel1.add(jLVehiculo_color, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 100, -1, -1));
-
-        jLReparacion_descripcion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLReparacion_descripcion.setText("Descripcion");
-        jPanel1.add(jLReparacion_descripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
-
-        jTReparacion_descripcion.setBackground(new java.awt.Color(204, 255, 204));
-        jTReparacion_descripcion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTReparacion_descripcionActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTReparacion_descripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 100, 40));
-
-        jLReparacion_idcliente.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLReparacion_idcliente.setText("IDCliente");
-        jPanel1.add(jLReparacion_idcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, -1, -1));
-
-        jTReparacion_idcliente.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel1.add(jTReparacion_idcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 80, 40));
+        jPanel1.add(jLVehiculo_matricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, -1, -1));
 
         jLReparacion_idvehiculo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLReparacion_idvehiculo.setText("IDVehiculo");
-        jPanel1.add(jLReparacion_idvehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, -1, -1));
+        jPanel1.add(jLReparacion_idvehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 10, -1, -1));
+
+        jTextField5.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 120, 50));
 
         jTReparacion_idvehiculo.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel1.add(jTReparacion_idvehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 90, 40));
-
-        jLReparacion_fecha.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLReparacion_fecha.setText("Fecha");
-        jPanel1.add(jLReparacion_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, -1, -1));
-
-        jTReparacion_fecha.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel1.add(jTReparacion_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 60, 40));
-
-        jLReparacion_tiempo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLReparacion_tiempo.setText("Tiempo");
-        jPanel1.add(jLReparacion_tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, -1, -1));
-
-        jTReparacion_tiempo.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel1.add(jTReparacion_tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 80, 40));
-
-        jLReparacion_total.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLReparacion_total.setText("TotalReparacioin");
-        jPanel1.add(jLReparacion_total, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, -1, -1));
-
-        jTReparacion_total.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel1.add(jTReparacion_total, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 120, 40));
+        jPanel1.add(jTReparacion_idvehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 50, 130, 40));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 340, 160));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 370, 180));
 
         jTextField1.setBackground(new java.awt.Color(0, 153, 255));
         jTextField1.setForeground(new java.awt.Color(51, 153, 255));
@@ -275,114 +187,73 @@ public class InterfazEliminar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTvehiculo_matriculaActionPerformed
 
-    private void jTReparacion_descripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTReparacion_descripcionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTReparacion_descripcionActionPerformed
-
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
+    private void JBinsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBinsertarActionPerformed
+        BorrarDatos b = new BorrarDatos();
+        if(jCB_Tablas.getSelectedItem().equals("Cliente")) {
+            b.borrarXdni(jTCliente_dni.getText());
+        }else if (jCB_Tablas.getSelectedItem().equals("Vehiculo")){ 
+            b.borrarXidVehiculo(Integer.parseInt(jTReparacion_idvehiculo.getText()));
+        } else {
+            b.borrarXmatricula(jTvehiculo_matricula.getText());
+        }
+        
+        
+    }//GEN-LAST:event_JBinsertarActionPerformed
+
+    private void jCB_TablasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCB_TablasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCB_TablasActionPerformed
+
+    private void Boton_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SalirActionPerformed
+       int opcion = JOptionPane.showConfirmDialog(InterfazEliminar.this, "¿Estas seguro que quieres cerrar la aplicación?",
+                "Ventana salida.", JOptionPane.YES_NO_OPTION);
+        if (opcion == JOptionPane.YES_OPTION) {
+            dispose();
+        }
+    
+    }//GEN-LAST:event_Boton_SalirActionPerformed
+
     public void mostrar(){
         if (jCB_Tablas.getSelectedItem().equals("Cliente")) {
-            jLCliente_nombre.setVisible(true);
-            jTCliente_nombre.setVisible(true);
+           
             jLCliente_dni.setVisible(true);
             jTCliente_dni.setVisible(true);
-            jLCliente_apellido.setVisible(true);
-            jTCliente_apellido.setVisible(true);
-            jTCliente_edad.setVisible(true);
-            jLCliente_edad.setVisible(true);
-            
-            jLVehiculo_color.setVisible(false);
-            jTVehiculo_color.setVisible(false);
+         
+          
             jLVehiculo_matricula.setVisible(false);
             jTvehiculo_matricula.setVisible(false);
-            jTvehiculo_marca.setVisible(false);
-            jLvehiculo_marca.setVisible(false);
-            jTvehiculo_modelo.setVisible(false);
-            jLvehiculo_modelo.setVisible(false);
-            jTvehiculo_año.setVisible(false);
-            jLvehiculo_año.setVisible(false);
-            
-            jLReparacion_descripcion.setVisible(false);
-            jTReparacion_descripcion.setVisible(false);
-            jLReparacion_fecha.setVisible(false);
-            jTReparacion_fecha.setVisible(false);
-            jTReparacion_idcliente.setVisible(false);
-            jLReparacion_idcliente.setVisible(false);
+          
             jTReparacion_idvehiculo.setVisible(false);
             jLReparacion_idvehiculo.setVisible(false);
-            jTReparacion_tiempo.setVisible(false);
-            jLReparacion_tiempo.setVisible(false);
-            jTReparacion_total.setVisible(false);
-            jLReparacion_total.setVisible(false);
+          
         }else if(jCB_Tablas.getSelectedItem().equals("Vehiculo")){
-            jLCliente_nombre.setVisible(false);
-            jTCliente_nombre.setVisible(false);
+          
             jLCliente_dni.setVisible(false);
             jTCliente_dni.setVisible(false);
-            jLCliente_apellido.setVisible(false);
-            jTCliente_apellido.setVisible(false);
-            jTCliente_edad.setVisible(false);
-            jLCliente_edad.setVisible(false);
-            
-            jLVehiculo_color.setVisible(true);
-            jTVehiculo_color.setVisible(true);
+        
+        
             jLVehiculo_matricula.setVisible(true);
             jTvehiculo_matricula.setVisible(true);
-            jTvehiculo_marca.setVisible(true);
-            jLvehiculo_marca.setVisible(true);
-            jTvehiculo_modelo.setVisible(true);
-            jLvehiculo_modelo.setVisible(true);
-            jTvehiculo_año.setVisible(true);
-            jLvehiculo_año.setVisible(true);
-            
-            jLReparacion_descripcion.setVisible(false);
-            jTReparacion_descripcion.setVisible(false);
-            jLReparacion_fecha.setVisible(false);
-            jTReparacion_fecha.setVisible(false);
-            jTReparacion_idcliente.setVisible(false);
-            jLReparacion_idcliente.setVisible(false);
+         
             jTReparacion_idvehiculo.setVisible(false);
             jLReparacion_idvehiculo.setVisible(false);
-            jTReparacion_tiempo.setVisible(false);
-            jLReparacion_tiempo.setVisible(false);
-            jTReparacion_total.setVisible(false);
-            jLReparacion_total.setVisible(false);
+          
         }else if(jCB_Tablas.getSelectedItem().equals("Reparacion")){
-            jLCliente_nombre.setVisible(false);
-            jTCliente_nombre.setVisible(false);
+           
             jLCliente_dni.setVisible(false);
             jTCliente_dni.setVisible(false);
-            jLCliente_apellido.setVisible(false);
-            jTCliente_apellido.setVisible(false);
-            jTCliente_edad.setVisible(false);
-            jLCliente_edad.setVisible(false);
-            
-            jLVehiculo_color.setVisible(false);
-            jTVehiculo_color.setVisible(false);
+          
+          
             jLVehiculo_matricula.setVisible(false);
             jTvehiculo_matricula.setVisible(false);
-            jTvehiculo_marca.setVisible(false);
-            jLvehiculo_marca.setVisible(false);
-            jTvehiculo_modelo.setVisible(false);
-            jLvehiculo_modelo.setVisible(false);
-            jTvehiculo_año.setVisible(false);
-            jLvehiculo_año.setVisible(false);
-            
-            jLReparacion_descripcion.setVisible(true);
-            jTReparacion_descripcion.setVisible(true);
-            jLReparacion_fecha.setVisible(true);
-            jTReparacion_fecha.setVisible(true);
-            jTReparacion_idcliente.setVisible(true);
-            jLReparacion_idcliente.setVisible(true);
+       
             jTReparacion_idvehiculo.setVisible(true);
             jLReparacion_idvehiculo.setVisible(true);
-            jTReparacion_tiempo.setVisible(true);
-            jLReparacion_tiempo.setVisible(true);
-            jTReparacion_total.setVisible(true);
-            jLReparacion_total.setVisible(true);
+         
         }
     }
     
@@ -423,47 +294,24 @@ public class InterfazEliminar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Boton_Salir;
     private javax.swing.JButton JBinsertar;
     private javax.swing.JButton jB_menu2;
     private javax.swing.JComboBox<String> jCB_Tablas;
-    private javax.swing.JLabel jLCliente_apellido;
     private javax.swing.JLabel jLCliente_dni;
-    private javax.swing.JLabel jLCliente_edad;
-    private javax.swing.JLabel jLCliente_nombre;
-    private javax.swing.JLabel jLReparacion_descripcion;
-    private javax.swing.JLabel jLReparacion_fecha;
-    private javax.swing.JLabel jLReparacion_idcliente;
     private javax.swing.JLabel jLReparacion_idvehiculo;
-    private javax.swing.JLabel jLReparacion_tiempo;
-    private javax.swing.JLabel jLReparacion_total;
-    private javax.swing.JLabel jLVehiculo_color;
     private javax.swing.JLabel jLVehiculo_matricula;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLvehiculo_año;
-    private javax.swing.JLabel jLvehiculo_marca;
-    private javax.swing.JLabel jLvehiculo_modelo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTCliente_apellido;
     private javax.swing.JTextField jTCliente_dni;
-    private javax.swing.JTextField jTCliente_edad;
-    private javax.swing.JTextField jTCliente_nombre;
-    private javax.swing.JTextField jTReparacion_descripcion;
-    private javax.swing.JTextField jTReparacion_fecha;
-    private javax.swing.JTextField jTReparacion_idcliente;
     private javax.swing.JTextField jTReparacion_idvehiculo;
-    private javax.swing.JTextField jTReparacion_tiempo;
-    private javax.swing.JTextField jTReparacion_total;
-    private javax.swing.JTextField jTVehiculo_color;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTvehiculo_año;
-    private javax.swing.JTextField jTvehiculo_marca;
+    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTvehiculo_matricula;
-    private javax.swing.JTextField jTvehiculo_modelo;
     // End of variables declaration//GEN-END:variables
 }

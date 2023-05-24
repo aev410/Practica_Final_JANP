@@ -214,7 +214,16 @@ public class InterfazSeleccionar extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 300, -1));
 
         jTextField9.setBackground(new java.awt.Color(51, 51, 255));
+<<<<<<< HEAD
         jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 350, 360, 110));
+=======
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField9ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, 360, 110));
+>>>>>>> 61d403ddc314c763902275f46eabbd186b0add97
 
         jTextField10.setBackground(new java.awt.Color(102, 153, 255));
         jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, 400, 80));
@@ -298,6 +307,10 @@ public class InterfazSeleccionar extends javax.swing.JFrame {
     private void jButtonReparacionFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReparacionFechaActionPerformed
         CajaMostrarTexto.setText(c.SelectReparacionPorFecha(jLabelFecha.getText()));
     }//GEN-LAST:event_jButtonReparacionFechaActionPerformed
+
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
 
     /**
      * @param args the command line arguments

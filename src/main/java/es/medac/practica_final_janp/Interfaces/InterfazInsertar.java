@@ -4,6 +4,14 @@
  */
 package es.medac.practica_final_janp.Interfaces;
 
+<<<<<<< HEAD
+import es.medac.practica_final_janp.bd.InsertarDatos;
+import es.medac.practica_final_janp.clases.Cliente;
+import es.medac.practica_final_janp.clases.Vehiculo;
+=======
+import es.medac.practica_final_janp.bd.BorrarDatos;
+>>>>>>> 3d4f8430b4453337736e1ec4ce397be8db504ecc
+
 /**
  *
  * @author pipoa
@@ -15,7 +23,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
      */
     public InterfazInsertar() {
         initComponents();
-        
+
         setLocationRelativeTo(null); // Centra la ventana en la pantalla
     }
 
@@ -65,7 +73,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jLReparacion_total = new javax.swing.JLabel();
         jTReparacion_total = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        panel = new javax.swing.JTextArea();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
@@ -80,6 +88,11 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
         JBinsertar.setText("Insert");
+        JBinsertar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBinsertarActionPerformed(evt);
+            }
+        });
         jPanel1.add(JBinsertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -98,6 +111,11 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jCB_Tablas.setBackground(new java.awt.Color(255, 255, 204));
         jCB_Tablas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jCB_Tablas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Vehiculo", "Reparacion" }));
+        jCB_Tablas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCB_TablasActionPerformed(evt);
+            }
+        });
         jPanel1.add(jCB_Tablas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 130, 40));
 
         jLCliente_dni.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -105,11 +123,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jPanel1.add(jLCliente_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, -1, -1));
 
         jTCliente_dni.setBackground(new java.awt.Color(204, 255, 204));
-        jTCliente_dni.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTCliente_dniActionPerformed(evt);
-            }
-        });
         jPanel1.add(jTCliente_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 100, 40));
 
         jTCliente_nombre.setBackground(new java.awt.Color(204, 255, 204));
@@ -134,11 +147,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jPanel1.add(jTCliente_edad, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, 80, 40));
 
         jTvehiculo_matricula.setBackground(new java.awt.Color(204, 255, 204));
-        jTvehiculo_matricula.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTvehiculo_matriculaActionPerformed(evt);
-            }
-        });
         jPanel1.add(jTvehiculo_matricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 110, 40));
 
         jLVehiculo_matricula.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -178,11 +186,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jPanel1.add(jLReparacion_descripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
         jTReparacion_descripcion.setBackground(new java.awt.Color(204, 255, 204));
-        jTReparacion_descripcion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTReparacion_descripcionActionPerformed(evt);
-            }
-        });
         jPanel1.add(jTReparacion_descripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 100, 40));
 
         jLReparacion_idcliente.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -220,19 +223,14 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jTReparacion_total.setBackground(new java.awt.Color(204, 255, 204));
         jPanel1.add(jTReparacion_total, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 120, 40));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        panel.setColumns(20);
+        panel.setRows(5);
+        jScrollPane1.setViewportView(panel);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 340, 160));
 
         jTextField1.setBackground(new java.awt.Color(0, 153, 255));
         jTextField1.setForeground(new java.awt.Color(51, 153, 255));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 230));
 
         jTextField2.setBackground(new java.awt.Color(0, 102, 204));
@@ -267,12 +265,56 @@ public class InterfazInsertar extends javax.swing.JFrame {
         m.setVisible(true);
     }//GEN-LAST:event_jB_menu2ActionPerformed
 
-    private void jTCliente_dniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTCliente_dniActionPerformed
+    private void JBinsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBinsertarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTCliente_dniActionPerformed
+        InsertarDatos i = new InsertarDatos();
+        if (jCB_Tablas.getSelectedItem().equals("Cliente")) {
+            String dni = "";
+            String nombre = "";
+            String apellido = "";
+            int edad = 0;
+            try {
+                dni = jTCliente_dni.getText();
+                nombre = jTCliente_nombre.getText();
+                apellido = jTCliente_apellido.getText();
+                edad = Integer.parseInt(jTCliente_edad.getText());
+                Cliente c = new Cliente(0, nombre, apellido, edad, dni);
+                panel.setText(i.insertarCliente(c));
+            } catch (Exception e) {
+                panel.setText("Error " + e);
+            }
+        } else if (jCB_Tablas.getSelectedItem().equals("Vehiculo")) {
+            String matricula = "";
+            String marca = "";
+            String modelo = "";
+            int año = o;
+            String color = "";
+            try {
+                matricula = jTvehiculo_matricula.getText();
+                marca = jTvehiculo_marca.getText();
+                modelo = jTvehiculo_modelo.getText();
+                anio = Integer.parseInt(jTvehiculo_año.getText());
+                color = jTVehiculo_color.getText();
+                Vehiculo v = new Vehiculo(0, matricula, marca, modelo, año, color);
+                panel.setText(i.insertarVehiculo(v));
+            } catch (Exception e) {
+                panel.setText("Error " + e);
+            }
+        } else if (jCB_Tablas.getSelectedItem().equals("Reparacion")) {
 
-    private void jTvehiculo_matriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTvehiculo_matriculaActionPerformed
+<<<<<<< HEAD
+        }
+    }//GEN-LAST:event_JBinsertarActionPerformed
+
+    private void jCB_TablasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCB_TablasActionPerformed
         // TODO add your handling code here:
+        mostrar();
+    }//GEN-LAST:event_jCB_TablasActionPerformed
+
+    public void mostrar() {
+=======
+    private void jTvehiculo_matriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTvehiculo_matriculaActionPerformed
+      
     }//GEN-LAST:event_jTvehiculo_matriculaActionPerformed
 
     private void jTReparacion_descripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTReparacion_descripcionActionPerformed
@@ -283,7 +325,19 @@ public class InterfazInsertar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
+    private void jCB_TablasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCB_TablasActionPerformed
+       
+    }//GEN-LAST:event_jCB_TablasActionPerformed
+
+    private void JBinsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBinsertarActionPerformed
+        BorrarDatos b = new BorrarDatos();
+        if (jCB_Tablas.getSelectedItem().equals("Cliente")) {
+    }
+    
+    }//GEN-LAST:event_JBinsertarActionPerformed
+
     public void mostrar(){
+>>>>>>> 3d4f8430b4453337736e1ec4ce397be8db504ecc
         if (jCB_Tablas.getSelectedItem().equals("Cliente")) {
             jLCliente_nombre.setVisible(true);
             jTCliente_nombre.setVisible(true);
@@ -293,7 +347,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
             jTCliente_apellido.setVisible(true);
             jTCliente_edad.setVisible(true);
             jLCliente_edad.setVisible(true);
-            
+
             jLVehiculo_color.setVisible(false);
             jTVehiculo_color.setVisible(false);
             jLVehiculo_matricula.setVisible(false);
@@ -304,7 +358,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
             jLvehiculo_modelo.setVisible(false);
             jTvehiculo_año.setVisible(false);
             jLvehiculo_año.setVisible(false);
-            
+
             jLReparacion_descripcion.setVisible(false);
             jTReparacion_descripcion.setVisible(false);
             jLReparacion_fecha.setVisible(false);
@@ -317,7 +371,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
             jLReparacion_tiempo.setVisible(false);
             jTReparacion_total.setVisible(false);
             jLReparacion_total.setVisible(false);
-        }else if(jCB_Tablas.getSelectedItem().equals("Vehiculo")){
+        } else if (jCB_Tablas.getSelectedItem().equals("Vehiculo")) {
             jLCliente_nombre.setVisible(false);
             jTCliente_nombre.setVisible(false);
             jLCliente_dni.setVisible(false);
@@ -326,7 +380,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
             jTCliente_apellido.setVisible(false);
             jTCliente_edad.setVisible(false);
             jLCliente_edad.setVisible(false);
-            
+
             jLVehiculo_color.setVisible(true);
             jTVehiculo_color.setVisible(true);
             jLVehiculo_matricula.setVisible(true);
@@ -337,7 +391,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
             jLvehiculo_modelo.setVisible(true);
             jTvehiculo_año.setVisible(true);
             jLvehiculo_año.setVisible(true);
-            
+
             jLReparacion_descripcion.setVisible(false);
             jTReparacion_descripcion.setVisible(false);
             jLReparacion_fecha.setVisible(false);
@@ -350,7 +404,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
             jLReparacion_tiempo.setVisible(false);
             jTReparacion_total.setVisible(false);
             jLReparacion_total.setVisible(false);
-        }else if(jCB_Tablas.getSelectedItem().equals("Reparacion")){
+        } else if (jCB_Tablas.getSelectedItem().equals("Reparacion")) {
             jLCliente_nombre.setVisible(false);
             jTCliente_nombre.setVisible(false);
             jLCliente_dni.setVisible(false);
@@ -359,7 +413,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
             jTCliente_apellido.setVisible(false);
             jTCliente_edad.setVisible(false);
             jLCliente_edad.setVisible(false);
-            
+
             jLVehiculo_color.setVisible(false);
             jTVehiculo_color.setVisible(false);
             jLVehiculo_matricula.setVisible(false);
@@ -370,7 +424,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
             jLvehiculo_modelo.setVisible(false);
             jTvehiculo_año.setVisible(false);
             jLvehiculo_año.setVisible(false);
-            
+
             jLReparacion_descripcion.setVisible(true);
             jTReparacion_descripcion.setVisible(true);
             jLReparacion_fecha.setVisible(true);
@@ -385,7 +439,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
             jLReparacion_total.setVisible(true);
         }
     }
-    
+
     /**
      * @param args the command line arguments
      */
@@ -455,7 +509,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
     private javax.swing.JTextField jTReparacion_tiempo;
     private javax.swing.JTextField jTReparacion_total;
     private javax.swing.JTextField jTVehiculo_color;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
@@ -464,5 +517,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
     private javax.swing.JTextField jTvehiculo_marca;
     private javax.swing.JTextField jTvehiculo_matricula;
     private javax.swing.JTextField jTvehiculo_modelo;
+    private javax.swing.JTextArea panel;
     // End of variables declaration//GEN-END:variables
 }

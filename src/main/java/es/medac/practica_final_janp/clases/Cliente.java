@@ -28,8 +28,9 @@ public class Cliente {
      * @param nombre
      * @param apellidos
      * @param edad 
+     * @param dni 
      */
-    public Cliente(int idCliente, String nombre, String apellidos, int edad) {
+    public Cliente(int idCliente, String nombre, String apellidos, int edad, String dni) {
         super();
         this.idCliente = idCliente;
         this.nombre = nombre;
