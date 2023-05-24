@@ -280,9 +280,6 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="dni"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTCliente_dniActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jTCliente_nombre">
           <Properties>
@@ -318,9 +315,6 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Matricula"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTvehiculo_matriculaActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLVehiculo_matricula">
           <Properties>
@@ -376,9 +370,6 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="descripcion"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTReparacion_descripcionActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLReparacion_idcliente">
           <Properties>

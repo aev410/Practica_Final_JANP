@@ -84,11 +84,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jLCliente_dni.setText("DNI");
 
         jTCliente_dni.setText("dni");
-        jTCliente_dni.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTCliente_dniActionPerformed(evt);
-            }
-        });
 
         jTCliente_nombre.setText("nombre");
 
@@ -103,11 +98,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jTCliente_edad.setText("edad");
 
         jTvehiculo_matricula.setText("Matricula");
-        jTvehiculo_matricula.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTvehiculo_matriculaActionPerformed(evt);
-            }
-        });
 
         jLVehiculo_matricula.setText("Matricula");
 
@@ -130,11 +120,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jLReparacion_descripcion.setText("Descripcion");
 
         jTReparacion_descripcion.setText("descripcion");
-        jTReparacion_descripcion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTReparacion_descripcionActionPerformed(evt);
-            }
-        });
 
         jLReparacion_idcliente.setText("IDCliente");
 
@@ -338,18 +323,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
         setVisible(false);
         m.setVisible(true);
     }//GEN-LAST:event_jB_menu2ActionPerformed
-
-    private void jTCliente_dniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTCliente_dniActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTCliente_dniActionPerformed
-
-    private void jTvehiculo_matriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTvehiculo_matriculaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTvehiculo_matriculaActionPerformed
-
-    private void jTReparacion_descripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTReparacion_descripcionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTReparacion_descripcionActionPerformed
 
     /**
      * @param args the command line arguments
