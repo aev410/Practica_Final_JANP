@@ -16,7 +16,8 @@ public class Reparacion {
     private int idCliente;
     private int idVehiculo;
 
-    public Reparacion(int idReparacion, String Descripcion, String fecha, String Tiempo, double totalReparacion, int idCliente, int idVehiculo) {
+    public Reparacion(int idReparacion, String Descripcion, String fecha, String Tiempo, 
+            double totalReparacion, int idCliente, int idVehiculo) {
         this.Descripcion = Descripcion;
         this.fecha = fecha;
         this.Tiempo = Tiempo;
@@ -25,9 +26,6 @@ public class Reparacion {
         this.idVehiculo = idVehiculo;
         
     }
-
-    
-
     public String getDescripcion() {
         return Descripcion;
     }

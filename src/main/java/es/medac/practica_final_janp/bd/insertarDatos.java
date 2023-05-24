@@ -13,7 +13,7 @@ import java.sql.*;
  *
  * @author naimg
  */
-public class insertarDatos {
+public class InsertarDatos {
     
     public int ultimoId(String tabla, String idtabla){
         int id = 0;
