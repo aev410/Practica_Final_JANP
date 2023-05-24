@@ -5,6 +5,7 @@
 package es.medac.practica_final_janp.Interfaces;
 
 import es.medac.practica_final_janp.bd.ConsultasDatos;
+import es.medac.practica_final_janp.bd.Update;
 
 /**
  *
@@ -20,7 +21,8 @@ public class InterfazModificar extends javax.swing.JFrame {
         
         setLocationRelativeTo(null); // Centra la ventana en la pantalla
     }
-
+    Update u = new Update();
+    ConsultasDatos c = new ConsultasDatos();
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,27 +36,48 @@ public class InterfazModificar extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jB_menu = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        modCliente = new javax.swing.JButton();
+        modReparacion = new javax.swing.JButton();
+        modVehiculo = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         CajaMostrarTexto = new javax.swing.JTextArea();
         jTextField9 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
+        txtIdCliente = new javax.swing.JTextField();
+        txtNombre = new javax.swing.JTextField();
+        txtApellido = new javax.swing.JTextField();
+        txtEdad = new javax.swing.JTextField();
+        txtDni = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        txtIdVehiculo = new javax.swing.JTextField();
+        txtCliente2 = new javax.swing.JTextField();
+        txtFecha = new javax.swing.JTextField();
+        txtHora = new javax.swing.JTextField();
+        txtTotalReparacion = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        txtIdVehiculo2 = new javax.swing.JTextField();
+        txtMatricula = new javax.swing.JTextField();
+        txtMarca = new javax.swing.JTextField();
+        txtModelo = new javax.swing.JTextField();
+        txtAño = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        txtColor = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
 
         jPanel2.setBackground(new java.awt.Color(153, 204, 255));
         jPanel2.setPreferredSize(new java.awt.Dimension(500, 500));
@@ -92,72 +115,47 @@ public class InterfazModificar extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(500, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 204));
-        jButton1.setText("Consultar por DNI");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        modCliente.setBackground(new java.awt.Color(255, 255, 204));
+        modCliente.setText("Modificar clientes");
+        modCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                modClienteActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 170, 30));
+        jPanel1.add(modCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 170, 30));
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 204));
-        jButton2.setText("jButton2");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 170, 30));
+        modReparacion.setBackground(new java.awt.Color(255, 255, 204));
+        modReparacion.setText("Modificar reparacion");
+        modReparacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modReparacionActionPerformed(evt);
+            }
+        });
+        jPanel1.add(modReparacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 170, 30));
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 204));
-        jButton3.setText("jButton3");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 170, 30));
-
-        jButton4.setBackground(new java.awt.Color(255, 255, 204));
-        jButton4.setText("jButton4");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 170, 30));
-
-        jButton5.setBackground(new java.awt.Color(255, 255, 204));
-        jButton5.setText("jButton5");
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 30, 170, 30));
-
-        jButton6.setBackground(new java.awt.Color(255, 255, 204));
-        jButton6.setText("jButton6");
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, 170, 30));
-
-        jButton7.setBackground(new java.awt.Color(255, 255, 204));
-        jButton7.setText("jButton7");
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 190, 170, 30));
-
-        jButton8.setBackground(new java.awt.Color(255, 255, 204));
-        jButton8.setText("jButton8");
-        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 280, 170, 30));
+        modVehiculo.setBackground(new java.awt.Color(255, 255, 204));
+        modVehiculo.setText("Modificar vehiculo");
+        modVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modVehiculoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(modVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 170, 30));
 
         jTextField1.setBackground(new java.awt.Color(102, 153, 255));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 210, 60));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 210, 60));
 
         jTextField2.setBackground(new java.awt.Color(102, 153, 255));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 210, 60));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 210, 60));
 
         jTextField3.setBackground(new java.awt.Color(102, 153, 255));
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 210, 70));
-
-        jTextField4.setBackground(new java.awt.Color(102, 153, 255));
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 210, 70));
-
-        jTextField5.setBackground(new java.awt.Color(102, 153, 255));
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 10, 190, 60));
-
-        jTextField6.setBackground(new java.awt.Color(102, 153, 255));
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 90, 190, 60));
-
-        jTextField7.setBackground(new java.awt.Color(102, 153, 255));
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, 190, 70));
-
-        jTextField8.setBackground(new java.awt.Color(102, 153, 255));
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, 210, 70));
+        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 210, 70));
 
         CajaMostrarTexto.setColumns(20);
         CajaMostrarTexto.setRows(5);
         jScrollPane1.setViewportView(CajaMostrarTexto);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, 300, -1));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 370, 300, -1));
 
         jTextField9.setBackground(new java.awt.Color(51, 51, 255));
         jTextField9.addActionListener(new java.awt.event.ActionListener() {
@@ -165,37 +163,182 @@ public class InterfazModificar extends javax.swing.JFrame {
                 jTextField9ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 360, 110));
+        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, 360, 110));
 
         jTextField10.setBackground(new java.awt.Color(102, 153, 255));
-        jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, 400, 80));
+        jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, 400, 80));
 
-        jTextField11.setText("jTextField11");
-        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, -1, -1));
+        txtIdCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdClienteActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtIdCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, -1, -1));
+
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, -1, -1));
+
+        txtApellido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtApellidoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 100, -1, -1));
+        jPanel1.add(txtEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, -1, -1));
+        jPanel1.add(txtDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 100, -1, -1));
+
+        jLabel1.setText("Nombre");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, -1, -1));
+
+        jLabel3.setText("Apellidos");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 80, -1, -1));
+
+        jLabel4.setText("Edad");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, -1, -1));
+
+        jLabel5.setText("Id cliente");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, -1, -1));
+
+        jLabel6.setText("DNI");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 80, -1, -1));
+        jPanel1.add(txtIdVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, -1, -1));
+
+        txtCliente2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCliente2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtCliente2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, -1, -1));
+
+        txtFecha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFechaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, -1, -1));
+        jPanel1.add(txtHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, -1, -1));
+        jPanel1.add(txtTotalReparacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 180, -1, -1));
+
+        jLabel7.setText("Id cliente");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 160, -1, -1));
+
+        jLabel8.setText("Fecha");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, -1, -1));
+
+        jLabel9.setText("Horas");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, -1, -1));
+
+        jLabel10.setText("Id vehiculo");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, -1, -1));
+
+        jLabel11.setText("Total de reparacion");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 160, -1, -1));
+        jPanel1.add(txtIdVehiculo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, -1, -1));
+
+        txtMatricula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMatriculaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtMatricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, -1, -1));
+
+        txtMarca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMarcaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, -1, -1));
+        jPanel1.add(txtModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 270, -1, -1));
+        jPanel1.add(txtAño, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 270, -1, -1));
+
+        jLabel12.setText("Matricula");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, -1, -1));
+
+        jLabel13.setText("Marca");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, -1, -1));
+
+        jLabel14.setText("Modelo");
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, -1, -1));
+
+        jLabel15.setText("Id vehiculo");
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, -1, -1));
+
+        jLabel16.setText("Año");
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 250, -1, -1));
+        jPanel1.add(txtColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 270, -1, -1));
+
+        jLabel17.setText("Color");
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 250, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 818, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 930, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ConsultasDatos c = new ConsultasDatos();
-        CajaMostrarTexto.setText(c.SelectClienteDni(dni));
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void modClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modClienteActionPerformed
+        CajaMostrarTexto.setText("FILA ANTIGUA \n "+c.SelectClienteDni(txtDni.getText()));
+        u.ModificarClientes(txtDni.getText(), Integer.parseInt(txtIdCliente.getText()), txtNombre.getText()
+                ,txtApellido.getText(),Integer.parseInt(txtEdad.getText()));
+        CajaMostrarTexto.setText("FILA NUEVA \n "+c.SelectClienteDni(txtDni.getText()));
+    }//GEN-LAST:event_modClienteActionPerformed
 
     private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField9ActionPerformed
+
+    private void txtApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtApellidoActionPerformed
+
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void txtCliente2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCliente2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCliente2ActionPerformed
+
+    private void txtFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFechaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFechaActionPerformed
+
+    private void txtMatriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMatriculaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMatriculaActionPerformed
+
+    private void txtMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMarcaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMarcaActionPerformed
+
+    private void txtIdClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdClienteActionPerformed
+        
+    }//GEN-LAST:event_txtIdClienteActionPerformed
+
+    private void modReparacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modReparacionActionPerformed
+        CajaMostrarTexto.setText(u.ModificarReparacion(txtIdVehiculo.getText(), 
+                txtCliente2.getText(), txtFecha.getText(), txtHora.getText(),
+                Integer.parseInt(txtTotalReparacion.getText())));
+    }//GEN-LAST:event_modReparacionActionPerformed
+
+    private void modVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modVehiculoActionPerformed
+        CajaMostrarTexto.setText("FILA ANTIGUA \n "+c.SelectVehiculo(txtMatricula.getText()));
+        u.ModificarVehiculo(txtIdVehiculo2.getText(), txtMatricula.getText(), txtMarca.getText()
+                ,txtModelo.getText(),txtAño.getText(), txtColor.getText());
+        CajaMostrarTexto.setText("FILA NUEVA \n "+c.SelectVehiculo(txtMatricula.getText()));
+    }//GEN-LAST:event_modVehiculoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,28 +381,49 @@ public class InterfazModificar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea CajaMostrarTexto;
     private javax.swing.JButton jB_menu;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JButton modCliente;
+    private javax.swing.JButton modReparacion;
+    private javax.swing.JButton modVehiculo;
+    private javax.swing.JTextField txtApellido;
+    private javax.swing.JTextField txtAño;
+    private javax.swing.JTextField txtCliente2;
+    private javax.swing.JTextField txtColor;
+    private javax.swing.JTextField txtDni;
+    private javax.swing.JTextField txtEdad;
+    private javax.swing.JTextField txtFecha;
+    private javax.swing.JTextField txtHora;
+    private javax.swing.JTextField txtIdCliente;
+    private javax.swing.JTextField txtIdVehiculo;
+    private javax.swing.JTextField txtIdVehiculo2;
+    private javax.swing.JTextField txtMarca;
+    private javax.swing.JTextField txtMatricula;
+    private javax.swing.JTextField txtModelo;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtTotalReparacion;
     // End of variables declaration//GEN-END:variables
 }

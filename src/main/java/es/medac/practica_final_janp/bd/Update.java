@@ -49,7 +49,7 @@ public class Update {
      * @param totalReparacion
      * @return filasModificadas
      */
-    public int ModificarReparacion(String idVehiculo, String idCliente, String fecha, String horas, int totalReparacion) {
+    public String ModificarReparacion(String idVehiculo, String idCliente, String fecha, String horas, int totalReparacion) {
         String consulta = "UPDATE reparacion SET fecha = '" + fecha + "', horas = '" + horas + "', totalReparacion = '"
                 + totalReparacion + "' where idVehiculo = '" + idVehiculo + "' and idCliente = '" + idCliente + "';";
         int filasModificadas = -1;
@@ -63,7 +63,7 @@ public class Update {
         } catch (SQLException e) {
             System.out.println("Error consulta modificar reparacion." + e.getMessage());
         }
-        return filasModificadas;
+        return "REPARACION MODIFICADA: "+fecha+", "+horas+", "+totalReparacion;
     }
     
     /**
