@@ -4,6 +4,8 @@
  */
 package es.medac.practica_final_janp.Interfaces;
 
+import es.medac.practica_final_janp.bd.BorrarDatos;
+
 /**
  *
  * @author pipoa
@@ -80,6 +82,11 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
         JBinsertar.setText("Insert");
+        JBinsertar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBinsertarActionPerformed(evt);
+            }
+        });
         jPanel1.add(JBinsertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -98,6 +105,11 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jCB_Tablas.setBackground(new java.awt.Color(255, 255, 204));
         jCB_Tablas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jCB_Tablas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Vehiculo", "Reparacion" }));
+        jCB_Tablas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCB_TablasActionPerformed(evt);
+            }
+        });
         jPanel1.add(jCB_Tablas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 130, 40));
 
         jLCliente_dni.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -272,7 +284,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
     }//GEN-LAST:event_jTCliente_dniActionPerformed
 
     private void jTvehiculo_matriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTvehiculo_matriculaActionPerformed
-        // TODO add your handling code here:
+      
     }//GEN-LAST:event_jTvehiculo_matriculaActionPerformed
 
     private void jTReparacion_descripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTReparacion_descripcionActionPerformed
@@ -282,6 +294,17 @@ public class InterfazInsertar extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jCB_TablasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCB_TablasActionPerformed
+       
+    }//GEN-LAST:event_jCB_TablasActionPerformed
+
+    private void JBinsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBinsertarActionPerformed
+        BorrarDatos b = new BorrarDatos();
+        if (jCB_Tablas.getSelectedItem().equals("Cliente")) {
+    }
+    
+    }//GEN-LAST:event_JBinsertarActionPerformed
 
     public void mostrar(){
         if (jCB_Tablas.getSelectedItem().equals("Cliente")) {
