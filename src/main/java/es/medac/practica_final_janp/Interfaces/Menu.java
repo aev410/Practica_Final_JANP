@@ -36,65 +36,79 @@ public class Menu extends javax.swing.JFrame {
         jB_InterfazEliminar = new javax.swing.JButton();
         jB_InterfazModificar = new javax.swing.JButton();
         jB_InterfazSeleccionar = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jB_InterfazInsertar.setBackground(new java.awt.Color(255, 255, 204));
+        jB_InterfazInsertar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jB_InterfazInsertar.setText("Insertar");
         jB_InterfazInsertar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB_InterfazInsertarActionPerformed(evt);
             }
         });
+        jPanel1.add(jB_InterfazInsertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 170, 40));
 
+        jB_InterfazEliminar.setBackground(new java.awt.Color(255, 255, 204));
+        jB_InterfazEliminar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jB_InterfazEliminar.setText("Eliminar");
         jB_InterfazEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB_InterfazEliminarActionPerformed(evt);
             }
         });
+        jPanel1.add(jB_InterfazEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 170, 40));
 
+        jB_InterfazModificar.setBackground(new java.awt.Color(255, 255, 204));
+        jB_InterfazModificar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jB_InterfazModificar.setText("Modificar");
         jB_InterfazModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB_InterfazModificarActionPerformed(evt);
             }
         });
+        jPanel1.add(jB_InterfazModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 170, 40));
 
+        jB_InterfazSeleccionar.setBackground(new java.awt.Color(255, 255, 204));
+        jB_InterfazSeleccionar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jB_InterfazSeleccionar.setText("Seleccionar");
         jB_InterfazSeleccionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB_InterfazSeleccionarActionPerformed(evt);
             }
         });
+        jPanel1.add(jB_InterfazSeleccionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, 170, 40));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jB_InterfazSeleccionar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jB_InterfazModificar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jB_InterfazEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jB_InterfazInsertar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(349, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(119, 119, 119)
-                .addComponent(jB_InterfazInsertar)
-                .addGap(18, 18, 18)
-                .addComponent(jB_InterfazEliminar)
-                .addGap(18, 18, 18)
-                .addComponent(jB_InterfazModificar)
-                .addGap(18, 18, 18)
-                .addComponent(jB_InterfazSeleccionar)
-                .addContainerGap(227, Short.MAX_VALUE))
-        );
+        jTextField1.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, 230, 60));
+
+        jTextField2.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 230, 60));
+
+        jTextField3.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 230, 60));
+
+        jTextField4.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 230, 60));
+
+        jTextField5.setBackground(new java.awt.Color(51, 204, 255));
+        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 300, 310));
+
+        jTextField6.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 370, 350));
+
+        jTextField7.setBackground(new java.awt.Color(51, 102, 255));
+        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 420, 410));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -179,5 +193,12 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton jB_InterfazModificar;
     private javax.swing.JButton jB_InterfazSeleccionar;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
 }
