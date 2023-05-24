@@ -69,17 +69,12 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        JBinsertar.setBackground(new java.awt.Color(255, 255, 204));
         JBinsertar.setText("Insert");
         jPanel1.add(JBinsertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
 
@@ -87,7 +82,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jLabel1.setText("Insertar");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, 24));
 
-        jB_menu2.setBackground(new java.awt.Color(51, 255, 51));
         jB_menu2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jB_menu2.setText("Menu");
         jB_menu2.addActionListener(new java.awt.event.ActionListener() {
@@ -95,7 +89,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
                 jB_menu2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jB_menu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, 160, 60));
+        jPanel1.add(jB_menu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 340, 160, 60));
 
         jCB_Tablas.setBackground(new java.awt.Color(255, 255, 204));
         jCB_Tablas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -106,9 +100,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jLCliente_dni.setText("DNI");
         jPanel1.add(jLCliente_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, -1, -1));
 
-<<<<<<< HEAD
-        jTCliente_dni.setText("dni");
-=======
         jTCliente_dni.setBackground(new java.awt.Color(204, 255, 204));
         jTCliente_dni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,7 +107,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTCliente_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 100, 40));
->>>>>>> 3b5b48b6852c3ebf2113c2321591a51d7793d823
 
         jTCliente_nombre.setBackground(new java.awt.Color(204, 255, 204));
         jPanel1.add(jTCliente_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 110, 40));
@@ -139,9 +129,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jTCliente_edad.setBackground(new java.awt.Color(204, 255, 204));
         jPanel1.add(jTCliente_edad, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, 80, 40));
 
-<<<<<<< HEAD
-        jTvehiculo_matricula.setText("Matricula");
-=======
         jTvehiculo_matricula.setBackground(new java.awt.Color(204, 255, 204));
         jTvehiculo_matricula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,7 +136,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTvehiculo_matricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 110, 40));
->>>>>>> 3b5b48b6852c3ebf2113c2321591a51d7793d823
 
         jLVehiculo_matricula.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLVehiculo_matricula.setText("Matricula");
@@ -187,9 +173,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jLReparacion_descripcion.setText("Descripcion");
         jPanel1.add(jLReparacion_descripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
-<<<<<<< HEAD
-        jTReparacion_descripcion.setText("descripcion");
-=======
         jTReparacion_descripcion.setBackground(new java.awt.Color(204, 255, 204));
         jTReparacion_descripcion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -197,7 +180,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTReparacion_descripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 100, 40));
->>>>>>> 3b5b48b6852c3ebf2113c2321591a51d7793d823
 
         jLReparacion_idcliente.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLReparacion_idcliente.setText("IDCliente");
@@ -255,21 +237,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
         jTextField4.setBackground(new java.awt.Color(51, 153, 255));
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 230, 190));
 
-        jTextField5.setBackground(new java.awt.Color(51, 51, 255));
-        jTextField5.setText("jTextField5");
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, 270, 130));
-
-        jTextField6.setBackground(new java.awt.Color(0, 0, 255));
-        jTextField6.setText("jTextField6");
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, 340, 170));
-
-        jTextField7.setBackground(new java.awt.Color(51, 51, 255));
-        jTextField7.setText("jTextField7");
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 420, 160, 180));
-
-        jTextField8.setBackground(new java.awt.Color(102, 102, 255));
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 130, 90));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -290,6 +257,18 @@ public class InterfazInsertar extends javax.swing.JFrame {
         setVisible(false);
         m.setVisible(true);
     }//GEN-LAST:event_jB_menu2ActionPerformed
+
+    private void jTCliente_dniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTCliente_dniActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTCliente_dniActionPerformed
+
+    private void jTvehiculo_matriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTvehiculo_matriculaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTvehiculo_matriculaActionPerformed
+
+    private void jTReparacion_descripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTReparacion_descripcionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTReparacion_descripcionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -364,10 +343,6 @@ public class InterfazInsertar extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTvehiculo_año;
     private javax.swing.JTextField jTvehiculo_marca;
     private javax.swing.JTextField jTvehiculo_matricula;
