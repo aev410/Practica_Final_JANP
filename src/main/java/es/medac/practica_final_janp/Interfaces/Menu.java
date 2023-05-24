@@ -4,6 +4,8 @@
  */
 package es.medac.practica_final_janp.Interfaces;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author pipoa
@@ -42,7 +44,16 @@ public class Menu extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
+        Boton_Salir = new javax.swing.JButton();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
+        jTextField10 = new javax.swing.JTextField();
+        jTextField11 = new javax.swing.JTextField();
+        jTextField12 = new javax.swing.JTextField();
+        jTextField13 = new javax.swing.JTextField();
+        jTextField14 = new javax.swing.JTextField();
+        jTextField15 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -105,10 +116,49 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 300, 310));
 
         jTextField6.setBackground(new java.awt.Color(51, 153, 255));
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 370, 350));
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 370, 340));
+
+        Boton_Salir.setBackground(new java.awt.Color(255, 0, 0));
+        Boton_Salir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Boton_Salir.setText("SALIR");
+        Boton_Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_SalirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Boton_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 150, -1));
+
+        jTextField8.setBackground(new java.awt.Color(255, 153, 51));
+        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, 180, 50));
+
+        jTextField9.setBackground(new java.awt.Color(255, 204, 51));
+        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, 200, 60));
 
         jTextField7.setBackground(new java.awt.Color(51, 102, 255));
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 420, 410));
+        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 420, 380));
+
+        jTextField10.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 110, 70, 160));
+
+        jTextField11.setBackground(new java.awt.Color(51, 102, 255));
+        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 50, 60, 290));
+
+        jTextField12.setBackground(new java.awt.Color(51, 51, 255));
+        jPanel1.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, 360));
+
+        jTextField13.setBackground(new java.awt.Color(51, 102, 255));
+        jPanel1.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 100, 40));
+
+        jTextField14.setBackground(new java.awt.Color(51, 51, 255));
+        jPanel1.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 390, 90, 30));
+
+        jTextField15.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel1.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 390, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -152,6 +202,18 @@ public class Menu extends javax.swing.JFrame {
         i.setVisible(true);
     }//GEN-LAST:event_jB_InterfazSeleccionarActionPerformed
 
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void Boton_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SalirActionPerformed
+         int opcion = JOptionPane.showConfirmDialog(Menu.this, "¿Estas seguro que quieres cerrar la aplicación?",
+                "Ventana salida.", JOptionPane.YES_NO_OPTION);
+        if (opcion == JOptionPane.YES_OPTION) {
+            dispose();
+        }
+    }//GEN-LAST:event_Boton_SalirActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -188,17 +250,26 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Boton_Salir;
     private javax.swing.JButton jB_InterfazEliminar;
     private javax.swing.JButton jB_InterfazInsertar;
     private javax.swing.JButton jB_InterfazModificar;
     private javax.swing.JButton jB_InterfazSeleccionar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
