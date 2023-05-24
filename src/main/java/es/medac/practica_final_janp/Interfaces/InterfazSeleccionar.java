@@ -159,6 +159,11 @@ public class InterfazSeleccionar extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 300, -1));
 
         jTextField9.setBackground(new java.awt.Color(51, 51, 255));
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField9ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, 360, 110));
 
         jTextField10.setBackground(new java.awt.Color(102, 153, 255));
@@ -185,6 +190,10 @@ public class InterfazSeleccionar extends javax.swing.JFrame {
         CajaMostrarTexto.setText(c.SelectClienteDni(dni));
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
 
     /**
      * @param args the command line arguments

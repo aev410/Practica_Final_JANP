@@ -29,7 +29,7 @@ public class Cliente {
      * @param apellidos
      * @param edad 
      */
-    public Cliente(int idCliente, String nombre, String apellidos, int edad) {
+    public Cliente(int idCliente, String nombre, String apellidos, int edad, String dni) {
         super();
         this.idCliente = idCliente;
         this.nombre = nombre;
