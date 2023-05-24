@@ -20,7 +20,8 @@
         <dependency>
             <groupId>org.netbeans.external</groupId>
             <artifactId>AbsoluteLayout</artifactId>
-            <version>RELEASE170</version>
+            <version>RELEASE150</version>
+            <type>jar</type>
         </dependency>
 <dependency>
         <groupId>javax.swing</groupId>

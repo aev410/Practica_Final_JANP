@@ -6,6 +6,7 @@ package es.medac.practica_final_janp.Interfaces;
 
 import es.medac.practica_final_janp.bd.ConsultasDatos;
 
+
 /**
  *
  * @author pipoa
@@ -20,7 +21,10 @@ public class InterfazSeleccionar extends javax.swing.JFrame {
         
         setLocationRelativeTo(null); // Centra la ventana en la pantalla
     }
-
+    /**
+     * Creamos objeto de la clase consultasDatos
+     */
+    ConsultasDatos c = new ConsultasDatos();
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,14 +38,14 @@ public class InterfazSeleccionar extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jB_menu = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        jButtonClientexDni = new javax.swing.JButton();
+        jButtonVehiculoMatricula = new javax.swing.JButton();
+        jButtonVehiculoMarcaModeloAnio = new javax.swing.JButton();
+        jButtonReparacionMatricula = new javax.swing.JButton();
+        jButtonClienteNombreApellido = new javax.swing.JButton();
+        jButtonVehiculoMarcaModelo = new javax.swing.JButton();
+        jButtonReparacionDni = new javax.swing.JButton();
+        jButtonReparacionFecha = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
@@ -54,6 +58,22 @@ public class InterfazSeleccionar extends javax.swing.JFrame {
         CajaMostrarTexto = new javax.swing.JTextArea();
         jTextField9 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabelDni = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabelNombre = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabelApellidos = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabelMatricula = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabelMarca = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabelModelo = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabelAnio = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jLabelFecha = new javax.swing.JTextField();
 
         jPanel2.setBackground(new java.awt.Color(153, 204, 255));
         jPanel2.setPreferredSize(new java.awt.Dimension(500, 500));
@@ -91,100 +111,193 @@ public class InterfazSeleccionar extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(500, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 204));
-        jButton1.setText("Consultar por DNI");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonClientexDni.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonClientexDni.setText("Consultar cliente x DNI");
+        jButtonClientexDni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonClientexDniActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 170, 30));
+        jPanel1.add(jButtonClientexDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 190, 30));
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 204));
-        jButton2.setText("jButton2");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 170, 30));
+        jButtonVehiculoMatricula.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonVehiculoMatricula.setText("Consultar vehículo x matrícula");
+        jButtonVehiculoMatricula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVehiculoMatriculaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonVehiculoMatricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 190, 30));
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 204));
-        jButton3.setText("jButton3");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 170, 30));
+        jButtonVehiculoMarcaModeloAnio.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonVehiculoMarcaModeloAnio.setText("Cons vclo x marca, mdlo y año");
+        jButtonVehiculoMarcaModeloAnio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVehiculoMarcaModeloAnioActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonVehiculoMarcaModeloAnio, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 200, 30));
 
-        jButton4.setBackground(new java.awt.Color(255, 255, 204));
-        jButton4.setText("jButton4");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 170, 30));
+        jButtonReparacionMatricula.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonReparacionMatricula.setText("Cons rep x matrícula de vclo");
+        jButtonReparacionMatricula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonReparacionMatriculaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonReparacionMatricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 190, 30));
 
-        jButton5.setBackground(new java.awt.Color(255, 255, 204));
-        jButton5.setText("jButton5");
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 170, 30));
+        jButtonClienteNombreApellido.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonClienteNombreApellido.setText("Cons cliente x nombre y apllds");
+        jButtonClienteNombreApellido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonClienteNombreApellidoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonClienteNombreApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 30, 200, 30));
 
-        jButton6.setBackground(new java.awt.Color(255, 255, 204));
-        jButton6.setText("jButton6");
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, 170, 30));
+        jButtonVehiculoMarcaModelo.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonVehiculoMarcaModelo.setText("Cons vehículo x marca y mdlo");
+        jButtonVehiculoMarcaModelo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVehiculoMarcaModeloActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonVehiculoMarcaModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, 190, 30));
 
-        jButton7.setBackground(new java.awt.Color(255, 255, 204));
-        jButton7.setText("jButton7");
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 180, 170, 30));
+        jButtonReparacionDni.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonReparacionDni.setText("Cons reparacion x dni");
+        jButtonReparacionDni.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonReparacionDniActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonReparacionDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 190, 190, 30));
 
-        jButton8.setBackground(new java.awt.Color(255, 255, 204));
-        jButton8.setText("jButton8");
-        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, 170, 30));
+        jButtonReparacionFecha.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonReparacionFecha.setText("Cons reparacion x fecha");
+        jButtonReparacionFecha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonReparacionFechaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonReparacionFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 280, 190, 30));
 
         jTextField1.setBackground(new java.awt.Color(102, 153, 255));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 210, 60));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 210, 60));
 
         jTextField2.setBackground(new java.awt.Color(102, 153, 255));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 210, 60));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 210, 60));
 
         jTextField3.setBackground(new java.awt.Color(102, 153, 255));
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 210, 70));
+        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 210, 70));
 
         jTextField4.setBackground(new java.awt.Color(102, 153, 255));
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 210, 70));
+        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 210, 70));
 
         jTextField5.setBackground(new java.awt.Color(102, 153, 255));
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 190, 60));
+        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 10, 220, 60));
 
         jTextField6.setBackground(new java.awt.Color(102, 153, 255));
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 80, 190, 60));
+        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, 210, 60));
 
         jTextField7.setBackground(new java.awt.Color(102, 153, 255));
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 190, 70));
+        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 170, 210, 70));
 
         jTextField8.setBackground(new java.awt.Color(102, 153, 255));
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 210, 70));
+        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 260, 210, 70));
 
         CajaMostrarTexto.setColumns(20);
         CajaMostrarTexto.setRows(5);
         jScrollPane1.setViewportView(CajaMostrarTexto);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 300, -1));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 300, -1));
 
         jTextField9.setBackground(new java.awt.Color(51, 51, 255));
-        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, 360, 110));
+        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 350, 360, 110));
 
         jTextField10.setBackground(new java.awt.Color(102, 153, 255));
-        jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, 400, 80));
+        jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, 400, 80));
+
+        jLabel1.setText("DNI cliente: ");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 70, 20));
+        jPanel1.add(jLabelDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, -1, -1));
+
+        jLabel3.setText("Nombre:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 70, 20));
+        jPanel1.add(jLabelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, -1, -1));
+
+        jLabel4.setText("Apellidos:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 70, 20));
+        jPanel1.add(jLabelApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, -1, -1));
+
+        jLabel5.setText("Matrícula:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 70, 20));
+        jPanel1.add(jLabelMatricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, -1, -1));
+
+        jLabel6.setText("Marca: ");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 70, 20));
+        jPanel1.add(jLabelMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, -1, -1));
+
+        jLabel7.setText("Modelo:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 70, 20));
+        jPanel1.add(jLabelModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 230, -1, -1));
+
+        jLabel8.setText("Año reparación:");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 90, 20));
+        jPanel1.add(jLabelAnio, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, -1, -1));
+
+        jLabel9.setText("Fecha matriculación:");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 120, 20));
+        jPanel1.add(jLabelFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 548, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 817, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ConsultasDatos c = new ConsultasDatos();
-        CajaMostrarTexto.setText(c.SelectClienteDni(dni));
+    private void jButtonClientexDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClientexDniActionPerformed
+
+        CajaMostrarTexto.setText(c.SelectClienteDni(jLabelDni.getText()));
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonClientexDniActionPerformed
+
+    private void jButtonClienteNombreApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClienteNombreApellidoActionPerformed
+        CajaMostrarTexto.setText(c.SelectClienteNombre(jLabelNombre.getText(), jLabelApellidos.getText()));
+    }//GEN-LAST:event_jButtonClienteNombreApellidoActionPerformed
+
+    private void jButtonVehiculoMarcaModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVehiculoMarcaModeloActionPerformed
+        CajaMostrarTexto.setText(c.SelectVehiculoMarcaModelo(jLabelMarca.getText(), jLabelModelo.getText()));
+    }//GEN-LAST:event_jButtonVehiculoMarcaModeloActionPerformed
+
+    private void jButtonReparacionDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReparacionDniActionPerformed
+        CajaMostrarTexto.setText(c.SelectReparacionPorVehiculo(jLabelAnio.getText()));
+    }//GEN-LAST:event_jButtonReparacionDniActionPerformed
+
+    private void jButtonVehiculoMatriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVehiculoMatriculaActionPerformed
+        CajaMostrarTexto.setText(c.SelectVehiculo(jLabelMatricula.getText()));
+    }//GEN-LAST:event_jButtonVehiculoMatriculaActionPerformed
+
+    private void jButtonVehiculoMarcaModeloAnioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVehiculoMarcaModeloAnioActionPerformed
+        CajaMostrarTexto.setText(c.SelectVehiculoMarcaModeloAnio(jLabelMarca.getText(), jLabelMarca.getText(),Integer.parseInt(jLabelAnio.getText())));
+    }//GEN-LAST:event_jButtonVehiculoMarcaModeloAnioActionPerformed
+
+    private void jButtonReparacionMatriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReparacionMatriculaActionPerformed
+        CajaMostrarTexto.setText(c.SelectReparacionPorVehiculo(jLabelMatricula.getText()));
+    }//GEN-LAST:event_jButtonReparacionMatriculaActionPerformed
+
+    private void jButtonReparacionFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReparacionFechaActionPerformed
+        CajaMostrarTexto.setText(c.SelectReparacionPorFecha(jLabelFecha.getText()));
+    }//GEN-LAST:event_jButtonReparacionFechaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,15 +337,31 @@ public class InterfazSeleccionar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea CajaMostrarTexto;
     private javax.swing.JButton jB_menu;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButtonClienteNombreApellido;
+    private javax.swing.JButton jButtonClientexDni;
+    private javax.swing.JButton jButtonReparacionDni;
+    private javax.swing.JButton jButtonReparacionFecha;
+    private javax.swing.JButton jButtonReparacionMatricula;
+    private javax.swing.JButton jButtonVehiculoMarcaModelo;
+    private javax.swing.JButton jButtonVehiculoMarcaModeloAnio;
+    private javax.swing.JButton jButtonVehiculoMatricula;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField jLabelAnio;
+    private javax.swing.JTextField jLabelApellidos;
+    private javax.swing.JTextField jLabelDni;
+    private javax.swing.JTextField jLabelFecha;
+    private javax.swing.JTextField jLabelMarca;
+    private javax.swing.JTextField jLabelMatricula;
+    private javax.swing.JTextField jLabelModelo;
+    private javax.swing.JTextField jLabelNombre;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
