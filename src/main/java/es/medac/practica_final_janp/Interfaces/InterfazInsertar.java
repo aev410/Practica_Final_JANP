@@ -284,7 +284,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     public void mostrar(){
-        if (jCB_Tablas.getSelectedIndex().equals("Cliente")) {
+        if (jCB_Tablas.getSelectedItem().equals("Cliente")) {
             jLCliente_nombre.setVisible(true);
             jTCliente_nombre.setVisible(true);
             jLCliente_dni.setVisible(true);
@@ -317,7 +317,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
             jLReparacion_tiempo.setVisible(false);
             jTReparacion_total.setVisible(false);
             jLReparacion_total.setVisible(false);
-        }else if(jCB_Tablas.getSelectedIndex().equals("Vehiculo")){
+        }else if(jCB_Tablas.getSelectedItem().equals("Vehiculo")){
             jLCliente_nombre.setVisible(false);
             jTCliente_nombre.setVisible(false);
             jLCliente_dni.setVisible(false);
@@ -350,7 +350,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
             jLReparacion_tiempo.setVisible(false);
             jTReparacion_total.setVisible(false);
             jLReparacion_total.setVisible(false);
-        }else if(jCB_Tablas.getSelectedIndex().equals("Reparacion")){
+        }else if(jCB_Tablas.getSelectedItem().equals("Reparacion")){
             jLCliente_nombre.setVisible(false);
             jTCliente_nombre.setVisible(false);
             jLCliente_dni.setVisible(false);
