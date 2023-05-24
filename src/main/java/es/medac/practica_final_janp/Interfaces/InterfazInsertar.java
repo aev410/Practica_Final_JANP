@@ -29,6 +29,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         JBinsertar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jB_menu2 = new javax.swing.JButton();
@@ -74,6 +75,9 @@ public class InterfazInsertar extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setText("PRUEBA");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
         JBinsertar.setText("Insert");
         jPanel1.add(JBinsertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
@@ -224,6 +228,11 @@ public class InterfazInsertar extends javax.swing.JFrame {
 
         jTextField1.setBackground(new java.awt.Color(0, 153, 255));
         jTextField1.setForeground(new java.awt.Color(51, 153, 255));
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 230));
 
         jTextField2.setBackground(new java.awt.Color(0, 102, 204));
@@ -270,6 +279,113 @@ public class InterfazInsertar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTReparacion_descripcionActionPerformed
 
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    public void mostrar(){
+        if (jCB_Tablas.getSelectedIndex().equals("Cliente")) {
+            jLCliente_nombre.setVisible(true);
+            jTCliente_nombre.setVisible(true);
+            jLCliente_dni.setVisible(true);
+            jTCliente_dni.setVisible(true);
+            jLCliente_apellido.setVisible(true);
+            jTCliente_apellido.setVisible(true);
+            jTCliente_edad.setVisible(true);
+            jLCliente_edad.setVisible(true);
+            
+            jLVehiculo_color.setVisible(false);
+            jTVehiculo_color.setVisible(false);
+            jLVehiculo_matricula.setVisible(false);
+            jTvehiculo_matricula.setVisible(false);
+            jTvehiculo_marca.setVisible(false);
+            jLvehiculo_marca.setVisible(false);
+            jTvehiculo_modelo.setVisible(false);
+            jLvehiculo_modelo.setVisible(false);
+            jTvehiculo_año.setVisible(false);
+            jLvehiculo_año.setVisible(false);
+            
+            jLReparacion_descripcion.setVisible(false);
+            jTReparacion_descripcion.setVisible(false);
+            jLReparacion_fecha.setVisible(false);
+            jTReparacion_fecha.setVisible(false);
+            jTReparacion_idcliente.setVisible(false);
+            jLReparacion_idcliente.setVisible(false);
+            jTReparacion_idvehiculo.setVisible(false);
+            jLReparacion_idvehiculo.setVisible(false);
+            jTReparacion_tiempo.setVisible(false);
+            jLReparacion_tiempo.setVisible(false);
+            jTReparacion_total.setVisible(false);
+            jLReparacion_total.setVisible(false);
+        }else if(jCB_Tablas.getSelectedIndex().equals("Vehiculo")){
+            jLCliente_nombre.setVisible(false);
+            jTCliente_nombre.setVisible(false);
+            jLCliente_dni.setVisible(false);
+            jTCliente_dni.setVisible(false);
+            jLCliente_apellido.setVisible(false);
+            jTCliente_apellido.setVisible(false);
+            jTCliente_edad.setVisible(false);
+            jLCliente_edad.setVisible(false);
+            
+            jLVehiculo_color.setVisible(true);
+            jTVehiculo_color.setVisible(true);
+            jLVehiculo_matricula.setVisible(true);
+            jTvehiculo_matricula.setVisible(true);
+            jTvehiculo_marca.setVisible(true);
+            jLvehiculo_marca.setVisible(true);
+            jTvehiculo_modelo.setVisible(true);
+            jLvehiculo_modelo.setVisible(true);
+            jTvehiculo_año.setVisible(true);
+            jLvehiculo_año.setVisible(true);
+            
+            jLReparacion_descripcion.setVisible(false);
+            jTReparacion_descripcion.setVisible(false);
+            jLReparacion_fecha.setVisible(false);
+            jTReparacion_fecha.setVisible(false);
+            jTReparacion_idcliente.setVisible(false);
+            jLReparacion_idcliente.setVisible(false);
+            jTReparacion_idvehiculo.setVisible(false);
+            jLReparacion_idvehiculo.setVisible(false);
+            jTReparacion_tiempo.setVisible(false);
+            jLReparacion_tiempo.setVisible(false);
+            jTReparacion_total.setVisible(false);
+            jLReparacion_total.setVisible(false);
+        }else if(jCB_Tablas.getSelectedIndex().equals("Reparacion")){
+            jLCliente_nombre.setVisible(false);
+            jTCliente_nombre.setVisible(false);
+            jLCliente_dni.setVisible(false);
+            jTCliente_dni.setVisible(false);
+            jLCliente_apellido.setVisible(false);
+            jTCliente_apellido.setVisible(false);
+            jTCliente_edad.setVisible(false);
+            jLCliente_edad.setVisible(false);
+            
+            jLVehiculo_color.setVisible(false);
+            jTVehiculo_color.setVisible(false);
+            jLVehiculo_matricula.setVisible(false);
+            jTvehiculo_matricula.setVisible(false);
+            jTvehiculo_marca.setVisible(false);
+            jLvehiculo_marca.setVisible(false);
+            jTvehiculo_modelo.setVisible(false);
+            jLvehiculo_modelo.setVisible(false);
+            jTvehiculo_año.setVisible(false);
+            jLvehiculo_año.setVisible(false);
+            
+            jLReparacion_descripcion.setVisible(true);
+            jTReparacion_descripcion.setVisible(true);
+            jLReparacion_fecha.setVisible(true);
+            jTReparacion_fecha.setVisible(true);
+            jTReparacion_idcliente.setVisible(true);
+            jLReparacion_idcliente.setVisible(true);
+            jTReparacion_idvehiculo.setVisible(true);
+            jLReparacion_idvehiculo.setVisible(true);
+            jTReparacion_tiempo.setVisible(true);
+            jLReparacion_tiempo.setVisible(true);
+            jTReparacion_total.setVisible(true);
+            jLReparacion_total.setVisible(true);
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -322,6 +438,7 @@ public class InterfazInsertar extends javax.swing.JFrame {
     private javax.swing.JLabel jLVehiculo_color;
     private javax.swing.JLabel jLVehiculo_matricula;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLvehiculo_año;
     private javax.swing.JLabel jLvehiculo_marca;
     private javax.swing.JLabel jLvehiculo_modelo;
